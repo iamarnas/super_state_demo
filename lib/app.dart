@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_super_state/flutter_super_state.dart';
-import 'package:super_state_demo/src/store/theme_module.dart';
 
+import 'src/store/modules.dart' show ThemeModule;
 import 'src/screens/login/login_page.dart';
 
 class App extends StatelessWidget {
