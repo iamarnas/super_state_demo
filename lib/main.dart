@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_super_state/flutter_super_state.dart';
 
 import 'app.dart';
-import 'src/store/counter_module.dart';
 import 'src/store/modules.dart';
 
 void main() {
