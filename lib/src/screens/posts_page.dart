@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_super_state/flutter_super_state.dart';
-import 'package:super_state_demo/src/models/user_post.dart';
 
+import '../../src/models/user_post.dart';
 import '../store/modules.dart' show PostModule;
 import '../extensions/super_state_api.dart';
 import '../extensions/string_apis.dart' show StringExtensions;
