@@ -5,6 +5,7 @@ Flutter super state exalpes like:
 - Advanced login page
 - Simple Counter
 - HTTP Request
+- Stream
 - Dynamic theme
 
 ## Getting Started
