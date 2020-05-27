@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_super_state/flutter_super_state.dart';
-import 'package:super_state_demo/src/extensions/super_state_api.dart';
 
+import '../../src/extensions/super_state_api.dart';
 import '../store/modules.dart' show CounterModule, ValidationFormModule;
 
 import 'login/login_page.dart';

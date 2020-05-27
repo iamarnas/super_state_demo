@@ -1,7 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:super_state_demo/src/screens/settings_page.dart';
-import 'package:super_state_demo/src/screens/stream_page.dart';
+
+import '../../src/screens/settings_page.dart';
+import '../../src/screens/stream_page.dart';
 
 import 'counter_page.dart';
 import 'posts_page.dart';
