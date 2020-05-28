@@ -13,7 +13,7 @@ class EmailValidator implements StringValidator {
 
   @override
   String errorText(String value) {
-    if (value?.isEmpty == true) return null; // Clear error text
+    if (value?.isEmpty ?? true) return null; // Clear error text
     if (!value.emailValidation) return 'Enter a valid email';
     return null;
   }
@@ -28,7 +28,7 @@ class PasswordValidator implements StringValidator {
   @override
   String errorText(String value) {
     if (value.containsSpace) return 'Space not allowed';
-    if (value?.isEmpty == true) return null; // Clear error text
+    if (value?.isEmpty ?? true) return null; // Clear error text
     if (!value.passwordValidation) {
       return 'Password must contain A-z, 0-9 and least 6 characters';
     }
