@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_super_state/flutter_super_state.dart';
 
-import '../../../src/screens/home_page.dart';
 import '../../store/modules.dart' show ValidationFormModule;
-
+import '../home_page.dart';
 import 'widgets/validation_input.dart';
 
 class LoginPage extends StatelessWidget {
