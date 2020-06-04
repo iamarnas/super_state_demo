@@ -10,7 +10,7 @@ class StreamModule extends StoreModule {
 
   StreamModule(Store store) : super(store);
 
-  final _stream = Stream.periodic(Duration(milliseconds: 1000), (i) => i)
+  var _stream = Stream.periodic(Duration(milliseconds: 1000), (i) => i)
       .asBroadcastStream();
 
   @override
