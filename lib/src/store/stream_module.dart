@@ -3,39 +3,30 @@ import 'dart:async';
 import 'package:flutter_super_state/flutter_super_state.dart';
 
 class StreamModule extends StoreModule {
-  int counter = 0;
-
-  final _controller = StreamController<int>.broadcast();
+  int _counter = 0;
+  int get counter => _counter;
+  bool _paused = true;
+  bool get paused => _paused;
 
   StreamModule(Store store) : super(store);
 
+  final _stream = Stream.periodic(Duration(milliseconds: 1000), (i) => i)
+      .asBroadcastStream();
+
   @override
-  Stream get onChange => _controller.stream.asBroadcastStream();
-
-  Timer _timer;
-
-  void count() {
-    setState(() {
-      _timer = Timer.periodic(Duration(seconds: 1), (_) {
-        if (_timer?.isActive ?? false) _controller.sink.add(counter++);
+  Stream get onChange => _stream.map((_) {
+        if (!_paused) return _counter++;
+        return null;
       });
-    });
-  }
 
-  void stop() {
-    setState(() {
-      _timer?.cancel();
-      _timer = null;
-    });
+  void pause() {
+    setState(() => _paused = !_paused);
   }
 
   void reset() {
     setState(() {
-      _controller.sink.add(counter = 0);
+      _counter = 0;
+      _paused = true;
     });
-  }
-
-  void dispose() {
-    _controller.close();
   }
 }
